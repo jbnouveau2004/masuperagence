@@ -1,0 +1,40 @@
+nom_de_route:
+    path: /
+    controller: App\Controller\HomeController::methode_appeler_a_cette_class
+
+tous_les_biens:
+    path: /biens/
+    controller: App\Controller\nouvellepage::nouvelle_methode
+
+nom_de_route2:
+    path: /bien/{id}
+    controller: App\Controller\HomeController::show
+    methods: [GET]
+
+admin:
+    path: /admin/
+    controller: App\Controller\Admin\AdminController::nouvelle_methode
+
+admin_edit:
+    path: /admin/edit/{id}
+    controller: App\Controller\Admin\AdminController::nouvelle_methode_edit
+    methods: GET|POST
+
+admin_new:
+    path: /admin/new/
+    controller: App\Controller\Admin\AdminController::nouvelle_methode_new
+    methods: GET|POST
+
+admin_delete:
+    path: /admin/delete/{id}
+    controller: App\Controller\Admin\AdminController::nouvelle_methode_delete
+    methods: GET|POST|DELETE
+
+admin_picture_delete:
+    path: /admin/picture/delete/{id}
+    controller: App\Controller\Admin\AdminPictureController::methode_delete
+    methods: GET|POST|DELETE
+
+controllers:
+    resource: ../src/Controller/
+    type: attribute

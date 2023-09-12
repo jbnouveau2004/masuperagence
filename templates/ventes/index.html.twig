@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Tout nos biens' %}
+
+
+{% block body %}
+
+<div class="container mt-4">
+<h2>Voir tout nos biens</h2>
+    {% for bien in biens %}
+        <a href="{{path('nom_de_route2', {id: bien.id})}}">{{bien.title}}</a>{{bien.city}} ({{bien.postalCode}}) {{bien.prix | number_format(0, '', ' ')}} €
+        <br>
+    {% endfor%}
+</div>
+
+{% endblock %}
